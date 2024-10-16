@@ -1,8 +1,14 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import VendorDashboardLayout from './layouts/VendorDashboardLayout';
 import RegisterForm from './pages/registerForm/RegisterForm';
+import UserPage from './pages/UserPage';
+import VendorLoginForm from './pages/loginForms/VendorLoginForm';
+import VendorDashboardLayout from './layouts/VendorDashboardLayout';
+import Products from './pages/dashboard/Products';
+import Orders from './pages/dashboard/Orders';
+import Overview from './pages/dashboard/Overview';
+import Main from './pages/Main';
 
 
 
@@ -12,12 +18,38 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <RegisterForm/>
+      element: <Main />
     },
     {
-      path:"/vendordash",
-      element: <VendorDashboardLayout/>
+      path:"/registerform",
+      element: <RegisterForm />
     },
+    {
+      path:"/userpage",
+      element: <UserPage />
+    },
+    {
+      path: "/login",
+      element: <VendorLoginForm />
+    },
+    {
+      path:"/dashboard",
+      element: <VendorDashboardLayout />,
+      children: [
+        {
+          path:"overview",
+          element: <Overview />
+        },
+        {
+          path:"products",
+          element: <Products />
+        },
+        {
+          path:"orders",
+          element: <Orders />
+        }
+      ]
+    }
     
   ]);
 
