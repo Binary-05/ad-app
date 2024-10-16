@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import VendorDashboardLayout from './layouts/VendorDashboardLayout';
-import registerForm from './pages/registerForm';
+import RegisterForm from './pages/registerForm/RegisterForm';
 
 
 
@@ -12,7 +12,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <registerForm/>,
+      element: <RegisterForm/>
     },
     {
       path:"/vendordash",
