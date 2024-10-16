@@ -9,6 +9,7 @@ import Products from './pages/dashboard/Products';
 import Orders from './pages/dashboard/Orders';
 import Overview from './pages/dashboard/Overview';
 import Main from './pages/Main';
+import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
 
 
 
@@ -23,6 +24,10 @@ function App() {
     {
       path:"/registerform",
       element: <RegisterForm />
+    },
+    {
+      path:"/vendorform",
+      element: <VendorRegisterForm />
     },
     {
       path:"/userpage",
