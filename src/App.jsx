@@ -1,8 +1,8 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Main from './pages/Main';
 import VendorDashboardLayout from './layouts/VendorDashboardLayout';
+import registerForm from './pages/registerForm';
 
 
 
@@ -12,13 +12,13 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <Main/>,
+      element: <registerForm/>,
     },
     {
       path:"/vendordash",
       element: <VendorDashboardLayout/>
-    }
-
+    },
+    
   ]);
 
   
