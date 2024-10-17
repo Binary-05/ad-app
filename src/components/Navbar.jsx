@@ -14,7 +14,7 @@ const Navbar = () => {
         <option value=""> Saved Items</option>
       </select>
 
-      <span><IoFilterSharp /></span>
+      <span><IoFilterSharp /></span> 
 
 
     </div>
