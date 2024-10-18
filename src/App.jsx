@@ -10,6 +10,7 @@ import Orders from './pages/dashboard/Orders';
 import Overview from './pages/dashboard/Overview';
 import Main from './pages/Main';
 import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
+import AddProducts from './pages/addProducts';
 
 
 
@@ -18,19 +19,19 @@ import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
 function App() {
   const router = createBrowserRouter([
     {
-      path:"/",
+      path: "/",
       element: <Main />
     },
     {
-      path:"/registerform",
+      path: "/registerform",
       element: <RegisterForm />
     },
     {
-      path:"/vendorform",
+      path: "/vendorform",
       element: <VendorRegisterForm />
     },
     {
-      path:"/userpage",
+      path: "/userpage",
       element: <UserPage />
     },
     {
@@ -38,28 +39,38 @@ function App() {
       element: <VendorLoginForm />
     },
     {
-      path:"/dashboard",
-      element: <VendorDashboardLayout />,
-      children: [
+      path:"/addproducts",
+      element: <AddProducts />
+    },
+      {
+        path: "/dashboard",
+        element: <VendorDashboardLayout />,
+        children: [
+          {
+            path: "overview",
+            element: <Overview />
+          },
         {
-          path:"overview",
-          element: <Overview />
+          path: "products",
+          element: <Products />,
+          // children: [
+          //   {
+          //     path: "addproducts",
+          //     element: <AddProducts />
+          //   },
+          // ]
         },
         {
-          path:"products",
-          element: <Products />
-        },
-        {
-          path:"orders",
+          path: "orders",
           element: <Orders />
         }
       ]
     }
-    
+
   ]);
 
-  
-  return <RouterProvider router ={router}/>;
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
