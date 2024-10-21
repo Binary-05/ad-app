@@ -11,6 +11,8 @@ import Overview from './pages/dashboard/Overview';
 import Main from './pages/Main';
 import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
 import AddProducts from './pages/addProducts';
+import ViewProducts from './pages/viewProducts';
+import UserLoginForms from './pages/loginForms/UserLoginForms';
 
 
 
@@ -35,12 +37,20 @@ function App() {
       element: <UserPage />
     },
     {
+      path:"/userlogin",
+      element: <UserLoginForms />
+    },
+    {
       path: "/login",
       element: <VendorLoginForm />
     },
     {
       path:"/addproducts",
       element: <AddProducts />
+    },
+    {
+      path:"/viewproducts",
+      element: <ViewProducts />
     },
       {
         path: "/dashboard",
