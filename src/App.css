@@ -4,9 +4,21 @@
   }
 
 .img{
-    background-image: url(./assets/images/sleek-bgimg.jpg);
+    background-image: url(./assets/images/purse.jpg);
     background-attachment: fixed;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.reg{
+  background-image: url(./assets/images/purse.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.log{
+  background-image: url(./assets/images/purse.jpg);
+  height: 100vh;
+  background-size: cover;
 }
