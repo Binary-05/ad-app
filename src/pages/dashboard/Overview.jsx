@@ -4,7 +4,7 @@ import { LuCircleDashed } from "react-icons/lu";
 
 const Overview = () => {
   return (
-    <div className='pl-52 m-5'>
+    <div className='pl-52 m-5 pt-16'>
       <button className='border-2 bg-black text-white p-4 rounded-lg'>Select a plan to get your first month for Ghc10</button>
       <div>
         <h1 className='text-[20px] font-semibold pt-5'>Get ready to sell</h1>
