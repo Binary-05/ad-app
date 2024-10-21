@@ -9,7 +9,7 @@ const ViewProducts = () => {
             <Navbar />
             <div className='flex'>
                 <Sidebar />
-                <div className='pl-52 m-5'>
+                <div className='pl-52 m-5 pt-10'>
                     <p className='text-[20px] font-semibold'>Welcome to your store</p>
                     <div className='flex space-x-72 pb-5'>
                         <div className='flex'>

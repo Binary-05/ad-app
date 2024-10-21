@@ -9,7 +9,7 @@ const AddProducts = () => {
             <Navbar />
             <div className="flex">
                 <Sidebar />
-                <div className="pl-52">
+                <div className="pl-52 pt-16">
                     <div className="flex mt-9 ml-9">
                         <span className="pt-3"><BsArrowLeft /></span>
                         <span className="text-[25px] font-bold">Add product</span>
