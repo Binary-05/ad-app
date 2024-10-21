@@ -3,7 +3,7 @@ import Sidebar from "../../components/Sidebar";
 import { BsArrowLeft } from "react-icons/bs";
 
 
-const AddProducts = () => {
+const AddAdverts = () => {
     return (
         <div>
             <Navbar />
@@ -53,4 +53,4 @@ const AddProducts = () => {
     )
 }
 
-export default AddProducts;
+export default AddAdverts;

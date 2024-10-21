@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import K from './constant';
 
+
 // const adlists = () =>{
 //   const [ads, setAds]= useState([]);
 //   const getAds = async () => {

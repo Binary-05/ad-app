@@ -3,9 +3,9 @@ import { MdCheckBoxOutlineBlank } from "react-icons/md";
 const VendorLoginForm = () => {
   return (
     <div>
-      <div>
+      <div className="log">
         <p className="flex text-[25px] font-semibold pl-96 pr-16 mt-8">Login as a Vendor</p>
-        <form className=' border-2 w-[35vw] h-[80vh] ml-96 mt-5'>
+        <form className=' border-2 w-[35vw] h-[80vh] ml-96 mt-5 bg-white'>
           <p className='flex text-[28px] justify-center pb-5'>Login</p>
           <div className="pl-16">
           <div className='flex flex-col'>
