@@ -13,6 +13,7 @@ import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
 import AddProducts from './pages/addProducts';
 import ViewProducts from './pages/viewProducts';
 import UserLoginForms from './pages/loginForms/UserLoginForms';
+import ViewSingleAd from './pages/viewSingleAd';
 
 
 
@@ -39,6 +40,10 @@ function App() {
     {
       path:"/userlogin",
       element: <UserLoginForms />
+    },
+    {
+      path: "/viewsinglead",
+      element: <ViewSingleAd/>
     },
     {
       path: "/login",
