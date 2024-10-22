@@ -6,9 +6,9 @@ const Main = () => {
       <section className='flex flex-col gap-y-7 text-white'>
         <div>
           <span>Icon</span>
-          <span className='text-[30px] font-bold italic'>Sleek</span>
+          <span className='text-[30px] font-bold italic'>B-ADs</span>
         </div>
-        <h1 className='flex justify-center text-[5rem] font-bold'>Welcome to Sleek</h1>
+        <h1 className='flex justify-center text-[5rem] font-bold'>Welcome to B-ADs</h1>
         <p className='flex justify-center font-semibold text-[30px]'>Where would you like to go?</p>
         <div className='flex justify-between ml-80 mr-80 text-[25px] font-bold'>
         <div className='flex border-b-2 pb-2 border-green-700'>
