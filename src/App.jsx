@@ -14,6 +14,7 @@ import AddProducts from './pages/addProducts';
 import ViewProducts from './pages/viewProducts';
 import UserLoginForms from './pages/loginForms/UserLoginForms';
 import ViewSingleAd from './pages/viewSingleAd';
+import AddAdverts from './pages/addProducts';
 
 
 
