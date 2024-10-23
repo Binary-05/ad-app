@@ -1,4 +1,5 @@
 import { FaAngleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -10,15 +11,16 @@ const Main = () => {
         </div>
         <h1 className='flex justify-center text-[5rem] font-bold'>Welcome to B-ADs</h1>
         <p className='flex justify-center font-semibold text-[30px]'>Where would you like to go?</p>
-        <div className='flex justify-between ml-80 mr-80 text-[25px] font-bold'>
-        <div className='flex border-b-2 pb-2 border-green-700'>
-          <span>SignUp as a Vendor</span>
-          <span className="pt-2.5 hover:text-green-700"><FaAngleRight /></span>
-        </div>
-        <div className='flex border-b-2 pb-2 border-green-700'>
-          <span>SignUp as a User</span>
-          <span className="pt-2.5 hover:text-green-700"><FaAngleRight /></span>
-        </div>
+        <p className="flex justify-center font-semibold text-[30px]">SignUp as;</p>
+        <div className='flex gap-10 justify-center text-[25px] font-bold'>
+          <div className='flex border-2 px-3 rounded-full hover:bg-violet-900 border-violet-900'>
+            <button className="text-[#140C00]">Vendor</button>
+            <Link to="/vendorform" className="pt-2.5 "><FaAngleRight /></Link>
+          </div>
+          <div className='flex border-2 rounded-full text-yellow-500 hover:bg-violet-900 border-violet-900'>
+            <button className="pl-3">User</button>
+            <span className="pt-2.5 px-3 "><FaAngleRight /></span>
+          </div>
         </div>
       </section>
 
