@@ -52,10 +52,15 @@ const AddAdverts = () => {
                             <div className="flex flex-col pb-5">
                                 <label htmlFor="">Category</label>
                                 <select name="" id="" className="border-2 p-1 rounded-lg">
-                                    <option value="">Jewelry</option>
-                                    <option value="">Clothes</option>
-                                    <option value="">Shoes</option>
-                                    <option value="">Bags</option>
+                                    <option value="">Electronics</option>
+                                    <option value="">Clothing</option>
+                                    <option value="">Interior</option>
+                                    <option value="">Accessories</option>
+                                    <option value="">Automobile</option>
+                                    <option value="">Kitchen</option>
+                                    <option value="">Art</option>
+                                    <option value="">Food</option>
+                                    <option value="">Construction</option>
                                 </select>
                             </div>
                             <div className="flex flex-col">

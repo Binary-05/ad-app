@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import { BsArrowLeft } from "react-icons/bs";
+import { apiGetAdvert } from '../../services/advert';
 
 const ViewProducts = () => {
+
+    const [ads, setAds] = useState([]);
+    const getAds = async () => {
+        const response = await apiGetAdvert();
+        console.log(response.data)
+        setAds(response.data);
+    }
+
+    useEffect(() => {
+        getAds();
+    }, []);
+
+
     return (
         <div>
             <Navbar />
@@ -22,11 +36,30 @@ const ViewProducts = () => {
                             <button className='border-2 p-1 rounded-lg px-4 text-white bg-green-600 border-green-600'>Share</button>
                         </div>
                     </div>
-                    <div className='border-2 h-[90vh] rounded-xl'>Items</div>
-                    <div className='pt-5 ml-96'>
-                        <button className='border-2 ml-52 px-4 rounded-lg bg-green-600 text-white p-1 border-green-600'>Edit</button>
-                        <button className='border-2 ml-16 px-4 rounded-lg bg-red-700 text-white p-1 border-red-600'>Delete</button>
+                    <div className='border-2 h-[90vh] w-[40vw] rounded-xl pl-10'>
+                        
+                        <div className="flex gap-x-10 mt-5 h-[55vh]">
+                            {
+                                ads.map((ad, index) => {
+                                    console.log(`${index}: ${ad.title}`);
+                                    return <div key={index} className="border-2 h-[65vh] w-[20vw] pl-20 shadow-lg shadow-slate-500">
+                                        <div>
+                                            <img src={ad.media} alt="" />
+                                        </div>
+                                        <p>{ad.title}</p>
+                                        <p>{ad.description}</p>
+                                        <p>{ad.category}</p>
+                                        <p>{ad.pricing}</p>
+                                        <div className='flex'>
+                                            <button className='border-2 px-4 rounded-lg bg-green-600 text-white p-1 border-green-600'>Edit</button>
+                                            <button className='border-2  px-4 rounded-lg bg-red-700 text-white p-1 border-red-600'>Delete</button>
+                                        </div>
+                                    </div>
+                                })
+                            }
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
