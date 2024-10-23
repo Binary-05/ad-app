@@ -31,7 +31,7 @@ const UserPage = () => {
                 console.log(`${index}: ${ad.media}`);
                 return <div key={index} className="border shadow-sm justify-center ">
                   <div >
-                    <img src={ad.media} alt="" />
+                    <img src={`https://savefiles.org/${ad.media}?shareable_link=436`} alt="" />
                   </div>
                   <p>{ad.title}</p>
                   <p>{ad.price}</p>
