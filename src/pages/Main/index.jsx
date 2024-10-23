@@ -13,11 +13,11 @@ const Main = () => {
         <p className='flex justify-center font-semibold text-[30px]'>Where would you like to go?</p>
         <p className="flex justify-center font-semibold text-[30px]">SignUp as;</p>
         <div className='flex gap-10 justify-center text-[25px] font-bold'>
-          <div className='flex border-2 px-3 rounded-full hover:bg-violet-900 border-violet-900'>
-            <button className="text-[#140C00]">Vendor</button>
+          <div className='flex border-2 px-3 rounded-full bg-white hover:text-white hover:bg-violet-900 border-violet-900'>
+            <button className="text-black">Vendor</button>
             <Link to="/vendorform" className="pt-2.5 "><FaAngleRight /></Link>
           </div>
-          <div className='flex border-2 rounded-full text-yellow-500 hover:bg-violet-900 border-violet-900'>
+          <div className='flex border-2 rounded-full text-black bg-white hover:text-white hover:bg-violet-900 border-violet-900'>
             <button className="pl-3">User</button>
             <span className="pt-2.5 px-3 "><FaAngleRight /></span>
           </div>
