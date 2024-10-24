@@ -10,12 +10,14 @@ import Orders from './pages/dashboard/Orders';
 import Overview from './pages/dashboard/Overview';
 import Main from './pages/Main';
 import VendorRegisterForm from './pages/registerForm/VendorRegisterForm';
-import AddProducts from './pages/addProducts';
+import AddProducts from './pages/addAdverts';
 import ViewProducts from './pages/viewProducts';
 import UserLoginForms from './pages/loginForms/UserLoginForms';
 import ViewSingleAd from './pages/viewSingleAd';
+import AddAdverts from './pages/addAdverts';
 import AddAdverts from './pages/addProducts';
 import { ToastContainer } from 'react-toastify';
+
 
 
 

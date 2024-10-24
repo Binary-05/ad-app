@@ -43,7 +43,7 @@ const AddAdverts = () => {
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label>Media</label>
-                                <input type="url" className="border-2 h-[30vh] rounded-lg"/>
+                                <input type="file" className="border-2 h-[30vh] rounded-lg"/>
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label htmlFor="">Description</label>
