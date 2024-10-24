@@ -1,51 +1,46 @@
 import { useEffect, useState } from "react";
-import { apiGetAdvert } from "../../services/advert";
-
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { apiGetSingleAd } from "../../services/advert";
 
 const Products = () => {
-
+  const [ad, setAd] = useState(null);
+  const { id } = useParams();
   const [ads, setAds] = useState([]);
-  const getAds = async () => {
-    const response = await apiGetAdvert();
-    console.log(response.data)
-    setAds(response.data);
-  }
+
+  const getAd = async () => {
+    try {
+      const response = await apiGetSingleAd();
+      console.log(response);
+      console.log(response.data);
+      setAd(response.data);
+      setAds(response.data);
+    } catch (error) {
+      console.error("Error fetching advert:", error);
+    }
+  };
 
   useEffect(() => {
-    getAds();
-  }, []);
-
+    getAd();
+  }, [id]);
 
   return (
     <div>
-      <div className='pt-20 pl-56'>
-        <div>
-          <p className="text-[2rem] font-bold">Vendor's Products</p>
-        </div>
-        <div className="border-2 rounded-lg ">
+      {ad && (
+        <>
+          <img src={`https://savefiles.org/${ad.media}?shareable_link=436`} alt={ad.title} />
+          <p>{ad.title}</p>
+          <p>{ad.description}</p>
+          <p>{ad.price}</p>
+          <p>{ad.category}</p>
           <div>
-            <p>Electronics</p>
+            <button className="border-2 bg-green-700">Edit</button>
+            <button className="border-2 bg-red-700">Delete</button>
           </div>
-          <div className="grid grid-cols-1 gap-x-10 mt-5 h-[55vh]">
-            {
-              ads.map((ad, index) => {
-                console.log(`${index}: ${ad.title}`);
-                return <div key={index} className="border-2 h-[45vh] w-[15vw] pl-20 shadow-lg shadow-slate-500">
-                  <div>
-                    <img src={ad.media} alt="" />
-                  </div>
-                  <p>{ad.title}</p>
-                  <p>{ad.description}</p>
-                  <p>{ad.category}</p>
-                  <p>{ad.pricing}</p>
-                </div>
-              })
-            }
-          </div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Products;

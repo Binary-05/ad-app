@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import { apiSignup } from '../../services/auth'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 // import { reg } from "./src/App.css" 
 
 const VendorRegisterForm = () => {
@@ -78,10 +78,17 @@ const VendorRegisterForm = () => {
                         <input name="role" type="password" className='border-2 ml-4 p-2 px-16 w-80 bg-[#F8F8F8]' />
                     </div> */}
                 </div>
-                <div>
-                    <button type='submit' className='border-2 p-4 py-2 ml-40 mt-4 h-10 w-28 bg-green-600 text-center text-white border-green-600'>
+                <div className='flex'>
+                <div className='flex mt-2'>
+                    <Link to="/dashboard" type='submit' className='border-2 p-4 py-2 ml-40 mt-4 h-10 w-28 bg-green-600 text-center text-white border-green-600'>
                         {loading ? "Loading..." : "Register"}
-                        </button>
+                        </Link>
+                </div>
+                <div className='flex mt-6'>
+                    <Link to="/login" type='submit' className='border-2 p-4 py-2 ml-24 h-10 w-28 bg-green-600 text-center text-white border-green-600'>
+                       Login
+                        </Link>
+                </div>
                 </div>
             </form>
         </div>

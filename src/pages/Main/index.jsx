@@ -15,7 +15,7 @@ const Main = () => {
         <div className='flex gap-10 justify-center text-[25px] font-bold'>
           <div className='flex border-2 px-3 rounded-full bg-white hover:text-white hover:bg-violet-900 border-violet-900'>
             <button className="text-black">Vendor</button>
-            <Link to="/vendorform" className="pt-2.5 "><FaAngleRight /></Link>
+            <Link to="/login" className="pt-2.5 "><FaAngleRight /></Link>
           </div>
           <div className='flex border-2 rounded-full text-black bg-white hover:text-white hover:bg-violet-900 border-violet-900'>
             <button className="pl-3">User</button>
