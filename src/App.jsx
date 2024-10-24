@@ -88,7 +88,12 @@ function App() {
   ]);
 
 
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <ToastContainer />
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
