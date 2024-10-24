@@ -49,7 +49,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className=' flex flex-col justify-center pb-20  bg-[#F8F8F8] '>
+    <div className='reg flex flex-col justify-center pb-20  bg-[#F8F8F8] '>
 
 
 

@@ -1,4 +1,5 @@
 // import { useState } from "react";
+import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -6,36 +7,21 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
-  // const [filteredProduct, setFilteredProducts] = useState([]);
-  // const [filterValues, setFilterValues] = useState({
-  //   category: "",
-  //   title: "",
-  //   price: "",
-  // });
-  // // function to filter products when the user clicks Submit
-  // const handleSubmit = () => {
-  //   let updatedProducts = products;
-  // }
-  // //apply filtering logic
-  // // if (filterValues.category) {
-  // //   updatedProducts = updatedProducts.filter(product =>
-  // //     product.category === filterValues.category
-  // //   );
 
-  //   if (filterValues.title) {
-  //     updatedProducts =updatedProducts.filter(product =>
-  //       product.title. toLowerCase().includes(filterValues.title.toLowerCase())
-  //     );
+const [filteredAds, setFilteredAds] = useState([]);
+const [searchQuery, setSearchQuery] = useState("");
+const handleSearch = (e) =>{
+  const query = e.target.value.toLowerCase();
+  setSearchQuery(query);
+};
 
-  //   //update the displayed products
-  //   setFilteredProducts(updatedProducts)
-  // };
+
 
   return (
     <div className="flex justify-evenly h-16 bg-black place-items-center fixed left-0 right-0">
       <h1 className="text-3xl text-white">B-ADs</h1>
-      <input type="search" name="search" id="" className="h-12 w-6/12 rounded-md" />
-      <button className="bg-green-600 text-white py-3 px-9 rounded-lg">Search</button>
+      <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearch} name="search" id="" className="h-12 w-6/12 rounded-md border border-black" />
+      <button type="submit" className="border border-white text-white py-3 px-9 rounded-lg">Search</button>
 
 
       <div className="dropdown">
@@ -49,6 +35,10 @@ const Navbar = () => {
           <Link to="/"> Log Out</Link>
         </div>
       </div>
+      
+
+      
+
 
       <div className="drpdwn text-center justify-center">
         <span className="drop text-white text-3xl"><IoFilterSharp /></span>

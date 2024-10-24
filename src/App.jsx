@@ -45,7 +45,7 @@ function App() {
       element: <UserLoginForms />
     },
     {
-      path: "/viewsinglead",
+      path: "/adverts/:id",
       element: <ViewSingleAd/>
     },
     {
