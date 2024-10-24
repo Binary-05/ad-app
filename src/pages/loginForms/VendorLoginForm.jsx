@@ -1,6 +1,7 @@
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
-import { apiSignin } from "../../services/auth";
+import { apiProfile, apiSignin } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const VendorLoginForm = () => {
 
@@ -17,7 +18,10 @@ const VendorLoginForm = () => {
     const response = await apiSignin({ email, password });
     // console.log(response.data)
     if (response.status === 200) {
-      localStorage.setItem("token",response.data.accessToken)
+      localStorage.setItem("token",response.data.accessToken);
+      // 
+      // const profileResponse = await apiProfile();
+      // console.log(profileResponse.data);
     }
 
     navigate("/dashboard")
@@ -51,7 +55,7 @@ const VendorLoginForm = () => {
           </div>
           <div className="flex justify-center">
             <p>Don't have an account?</p>
-            <p className="text-blue-700">Sign UP</p>
+            <Link to="/vendorform" className="text-blue-700">Sign Up</Link>
           </div>
         </form>
       </div>

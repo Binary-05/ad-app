@@ -14,6 +14,7 @@ import AddProducts from './pages/addAdverts';
 import ViewProducts from './pages/viewProducts';
 import UserLoginForms from './pages/loginForms/UserLoginForms';
 import ViewSingleAd from './pages/viewSingleAd';
+import EditAdverts from './pages/editAdverts';
 // import AddAdverts from './pages/addAdverts';
 // import AddAdverts from './pages/addProducts';
 // import { ToastContainer } from 'react-toastify';
@@ -41,33 +42,33 @@ function App() {
       element: <UserPage />
     },
     {
-      path:"/userlogin",
+      path: "/userlogin",
       element: <UserLoginForms />
     },
     {
       path: "/viewsinglead",
-      element: <ViewSingleAd/>
+      element: <ViewSingleAd />
     },
     {
       path: "/login",
       element: <VendorLoginForm />
     },
     {
-      path:"/addproducts",
+      path: "/addproducts",
       element: <AddProducts />
     },
     {
-      path:"/viewproducts",
+      path: "/viewproducts",
       element: <ViewProducts />
     },
-      {
-        path: "/dashboard",
-        element: <VendorDashboardLayout />,
-        children: [
-          {
-            path: "overview",
-            element: <Overview />
-          },
+    {
+      path: "/dashboard",
+      element: <VendorDashboardLayout />,
+      children: [
+        {
+          index: true,
+          element: <Overview />
+        },
         {
           path: "products",
           element: <Products />,
@@ -78,6 +79,14 @@ function App() {
           //   },
           // ]
         },
+        {
+          path: "edit:id ",
+          element: <EditAdverts />
+        },
+        // {
+        //   path: "edit/:id",
+        //   element: <EditAdverts />
+        // },
         {
           path: "orders",
           element: <Orders />

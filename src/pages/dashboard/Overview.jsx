@@ -4,19 +4,19 @@ import { LuCircleDashed } from "react-icons/lu";
 
 const Overview = () => {
   return (
-    <div className='pl-52 m-5 pt-16'>
+    <div className='pl-52 m-5 pt-16 bg-[#F1F1F1] w-[100vw]'>
       <button className='border-2 bg-black text-white p-4 rounded-lg border-black'>Select a plan to get your first month for Ghc10</button>
       <div>
         <h1 className='text-[20px] font-semibold pt-5'>Get ready to sell</h1>
         <p className='text-[13px] text-gray-600 font-sans pb-6'>Here is a guide to get started. As your business grows, you'll get fresh tips and insights here.</p>
       </div>
-      <div className='border-2 rounded-lg h-[80vh] w-[55vw]'>
+      <div className='border-2 rounded-lg h-[80vh] w-[55vw] bg-white'>
         <div className='p-4'>
           <p>Setup guide</p>
           <p>Use this personalized guide to get your store up and running.</p>
           <button className='border-2 px-3 rounded-lg border-gray-500'>0/5 completed</button>
         </div>
-        <div className='flex pl-4 gap-2 pb-3'>
+        <div className='flex pl-4 gap-2 pb-3 bg-[#F1F1F1]'>
           <div>
           <div className='flex gap-2'>
           <span className='pt-1'><LuCircleDashed /></span>

@@ -8,7 +8,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className='border-2 pl-3 h-[90vh] w-[15vw] pt-6 fixed mt-16'>
+    <div className='border-2 pl-3 h-[90vh] w-[15vw] pt-6 fixed mt-16 bg-[#F1F1F1]'>
       <div className=''>
         <div className='flex gap-2'>
           <span className='pt-1'><IoHome /></span>
