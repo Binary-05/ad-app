@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { apiSignup } from '../../services/auth'
+import { toast } from 'react-toastify'
 
 const RegisterForm = () => {
   const [loading, setLoading] = useState(false)
@@ -35,13 +36,14 @@ const RegisterForm = () => {
       console.log(response.data)
 
       //Show a success notification
-
+      toast.success("Success")
       navigate("/login") //takes user to the login page after successful registration
 
 
     } catch (error) {
-console.log(error)
-    } finally{
+      console.log(error)
+      toast.error("Errror creating an account")
+    } finally {
       setLoading(false)
     }
   }

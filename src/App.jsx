@@ -15,6 +15,8 @@ import ViewProducts from './pages/viewProducts';
 import UserLoginForms from './pages/loginForms/UserLoginForms';
 import ViewSingleAd from './pages/viewSingleAd';
 import AddAdverts from './pages/addAdverts';
+import AddAdverts from './pages/addProducts';
+import { ToastContainer } from 'react-toastify';
 
 
 

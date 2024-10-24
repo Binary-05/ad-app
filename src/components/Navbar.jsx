@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -5,6 +6,31 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
+  // const [filteredProduct, setFilteredProducts] = useState([]);
+  // const [filterValues, setFilterValues] = useState({
+  //   category: "",
+  //   title: "",
+  //   price: "",
+  // });
+  // // function to filter products when the user clicks Submit
+  // const handleSubmit = () => {
+  //   let updatedProducts = products;
+  // }
+  // //apply filtering logic
+  // // if (filterValues.category) {
+  // //   updatedProducts = updatedProducts.filter(product =>
+  // //     product.category === filterValues.category
+  // //   );
+
+  //   if (filterValues.title) {
+  //     updatedProducts =updatedProducts.filter(product =>
+  //       product.title. toLowerCase().includes(filterValues.title.toLowerCase())
+  //     );
+
+  //   //update the displayed products
+  //   setFilteredProducts(updatedProducts)
+  // };
+
   return (
     <div className="flex justify-evenly h-16 bg-black place-items-center fixed left-0 right-0">
       <h1 className="text-3xl text-white">B-ADs</h1>
@@ -29,16 +55,18 @@ const Navbar = () => {
         <div className="drpdwn-content">
           <form>
             <p>Title</p>
-            <input type="text" className="rounded" />
+            <input type="text" name="title"  className="rounded" />
 
             <p>Category</p>
             <input type="text" className="rounded" />
 
-            di
+            <p>Price</p>
+            <input type="text" />
 
             <button className="border border-black">Submit</button>
+            {/* onInput= {(e)=> setFilterValues({...filterValues,title:e.target.value})} */}
           </form>
-           
+
         </div>
       </div>
 
