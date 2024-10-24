@@ -1,5 +1,7 @@
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { apiSignin } from "../../services/auth";
+import { Link } from "react-router-dom";
+
 
 const UserLoginForms = () => {
   const handleSubmit = async (event) => {
@@ -43,7 +45,7 @@ const UserLoginForms = () => {
           </div>
           <div className="flex justify-center">
             <p>Don't have an account?</p>
-            <p className="text-blue-700">Sign UP</p>
+            <Link to="/registerform"><p className="text-blue-700">Sign UP</p></Link>
           </div>
         </form>
       </div>
