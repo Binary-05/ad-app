@@ -62,6 +62,10 @@ function App() {
       element: <ViewProducts />
     },
     {
+      path: "/edit",
+      element: <EditAdverts />
+    },
+    {
       path: "/dashboard",
       element: <VendorDashboardLayout />,
       children: [
@@ -70,7 +74,7 @@ function App() {
           element: <Overview />
         },
         {
-          path: "products",
+          path: "products/:id",
           element: <Products />,
           // children: [
           //   {
@@ -79,10 +83,7 @@ function App() {
           //   },
           // ]
         },
-        {
-          path: "edit:id ",
-          element: <EditAdverts />
-        },
+        
         // {
         //   path: "edit/:id",
         //   element: <EditAdverts />

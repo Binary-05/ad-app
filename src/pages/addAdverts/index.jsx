@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import { BsArrowLeft } from "react-icons/bs";
 import { apiAddAdverts } from "../../services/advert";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const AddAdverts = () => {
@@ -33,9 +33,9 @@ const AddAdverts = () => {
             const response = await apiAddAdverts(formData);  // post data to api
             console.log(response.data)
             // Redirect to the all adverts page
-            navigate('/viewproducts  ')
+            navigate('/viewproducts')
         } catch (error) {
-            console.log("error",error)
+            console.log("error", error)
         }
     };
 
@@ -45,12 +45,12 @@ const AddAdverts = () => {
             <Navbar />
             <div className="flex">
                 <Sidebar />
-                <div className="pl-52 pt-16">
+                <div className="pl-52 pt-16 bg-[#F1F1F1] w-full">
                     <div className="flex mt-9 ml-9">
                         <span className="pt-3"><BsArrowLeft /></span>
                         <span className="text-[25px] font-bold">Add Advert</span>
                     </div>
-                    <form onSubmit={handleSubmit} className="border-2 mt-5 ml-9 w-[50vw] rounded-lg">
+                    <form onSubmit={handleSubmit} className="border-2 mt-5 ml-9 w-[50vw] rounded-lg bg-[#FFFFFF]">
                         <div className="m-4">
                             <div className="flex flex-col pb-5">
                                 <label>Title</label>
@@ -58,15 +58,15 @@ const AddAdverts = () => {
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label>Media</label>
-                                <input type="file" className="border-2 h-[30vh] rounded-lg" name="media" />
+                                <input type="file" className="border-2 h-20 rounded-lg" name="media" />
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label htmlFor="">Description</label>
-                                <input type="text" className="border-2 h-40 rounded-lg" name="description" />
+                                <input type="text" className="border-2 h-20 rounded-lg" name="description" />
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label htmlFor="">Category</label>
-                                <input type="text" className="border-2 h-40 rounded-lg" name="category" />
+                                <input type="text" className="border-2 h-10 rounded-lg" name="category" />
                             </div>
                             {/* <div className="flex flex-col pb-5">
                                 <label htmlFor="">Category</label>
@@ -87,7 +87,7 @@ const AddAdverts = () => {
                                 <input type="text" className="border-2 p-1 rounded-lg" name="price" />
                             </div>
                         </div>
-                        <button className="border-2 p-1 px-3 mt-5 ml-96 bg-green-600 text-white rounded-lg" type="submit">Save</button>
+                        <button className="border-2 ml-80 p-1 px-3 mt-5 bg-green-600 text-white rounded-lg" type="submit">Save</button>
                     </form>
 
                 </div>

@@ -32,8 +32,8 @@ const VendorLoginForm = () => {
   return (
     <div>
       <div className="log">
-        <p className="flex text-[25px] font-semibold pl-96 pr-16 mt-8">Login as a Vendor</p>
-        <form onSubmit={handleSubmit} className=' border-2 w-[35vw] h-[80vh] ml-96 mt-5 bg-white'>
+        <p className="flex text-[25px] font-semibold pl-96 pr-16 mt-8 text-white">Login as a Vendor</p>
+        <form onSubmit={handleSubmit} className=' border-2 w-[35vw] h-[80vh] ml-96 mt-5 backdrop-filter backdrop-blur-lg'>
           <p className='flex text-[28px] justify-center pb-5'>Login</p>
           <div className="pl-16">
           <div className='flex flex-col'>
@@ -42,7 +42,7 @@ const VendorLoginForm = () => {
           </div>
           <div className='flex flex-col'>
             <label htmlFor="">Password</label>
-            <input type="text" name="password" className='border-2 w-[25vw] p-2 rounded-lg mb-3'/>
+            <input type="password" name="password" className='border-2 w-[25vw] p-2 rounded-lg mb-3'/>
           </div>
           <div className="flex mb-3">
             <div className='flex'>
@@ -51,7 +51,7 @@ const VendorLoginForm = () => {
             </div>
             <p className="pl-24 text-blue-700">Forgot Password?</p>
           </div>
-          <button type="submit" className="boredr-2 bg-blue-700 text-white p-2 w-[25vw] rounded-lg mb-2">LOGIN</button>
+          <Link to="/dashboard" type="submit" className="boredr-2 bg-blue-700 text-white p-2 w-[25vw] rounded-lg mb-2">LOGIN</Link>
           </div>
           <div className="flex justify-center">
             <p>Don't have an account?</p>

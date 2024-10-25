@@ -49,7 +49,7 @@ const VendorRegisterForm = () => {
     return (
 
         <div className='reg flex flex-col justify-center h-[100vh] bg-[#F8F8F8]'>
-            <form onSubmit={handleSubmit} className='flex flex-col  border gap-y-3 h-[130vh] w-[40vw] self-center pl-8 bg-[#FFFFFF]'>
+            <form onSubmit={handleSubmit} className='flex flex-col  border gap-y-3 h-[90vh] w-[40vw] self-center pl-8 backdrop-filter backdrop-blur-lg'>
 
                 <h1 className=' text-[2rem] mt-8'>Register</h1>
                 <div className=' flex flex-col gap-y-5 items-end pr-7'>
@@ -80,7 +80,7 @@ const VendorRegisterForm = () => {
                 </div>
                 <div className='flex'>
                 <div className='flex mt-2'>
-                    <Link to="/dashboard" type='submit' className='border-2 p-4 py-2 ml-40 mt-4 h-10 w-28 bg-green-600 text-center text-white border-green-600'>
+                    <Link to="/login" type='submit' className='border-2 p-4 py-2 ml-40 mt-4 h-10 w-28 bg-green-600 text-center text-white border-green-600'>
                         {loading ? "Loading..." : "Register"}
                         </Link>
                 </div>

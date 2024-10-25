@@ -2,7 +2,7 @@ import { apiClient } from "./config";
 
 
 export const apiGetAdverts = async (id) => await apiClient.get(`/adverts/${id}`);
-export const apiGetAdvert = async (id) => await apiClient.get(`/adverts/${id}`);    
+// export const apiGetAdvert = async (id) => await apiClient.get(`/adverts/${id}`);    
 
 export const apiGetSingleAd = async (adId) => apiClient.get(`/adverts/${adId}`);
 export const apiGetAdvert = async () => await apiClient.get('/adverts');

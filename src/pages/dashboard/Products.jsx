@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { apiGetSingleAd } from "../../services/advert";
 
@@ -10,7 +10,7 @@ const Products = () => {
 
   const getAd = async () => {
     try {
-      const response = await apiGetSingleAd();
+      const response = await apiGetSingleAd(id);
       console.log(response);
       console.log(response.data);
       setAd(response.data);
@@ -24,21 +24,32 @@ const Products = () => {
     getAd();
   }, [id]);
 
+
+const handleDelete = async (id) => {
+  try {
+    const res = await axios.delete(`${VITE_BASE_URL}/adverts/${id}`)
+  } catch (error) {
+    console.log("Error deleting advert", error)
+  }
+}
+
   return (
-    <div>
+    <div className="h-[130vh]">
+      <div className="flex flex-col ml-80 mt-20 h-[100vh] p-10 border shadow-lg w-[40vw]  rounded-sm place-self-center">
       {ad && (
         <>
-          <img src={`https://savefiles.org/${ad.media}?shareable_link=436`} alt={ad.title} />
-          <p>{ad.title}</p>
-          <p>{ad.description}</p>
-          <p>{ad.price}</p>
-          <p>{ad.category}</p>
+          <img src={`https://savefiles.org/${ad.media}?shareable_link=436`} alt={ad.title} className=" pt-2 "/>
+          <p className="pb-3">{ad.title}</p>
+          <p className="pb-3">{ad.description}</p>
+          <p className="pb-3">{ad.price}</p>
+          <p className="pb-3">{ad.category}</p>
           <div>
-            <button className="border-2 bg-green-700">Edit</button>
-            <button className="border-2 bg-red-700">Delete</button>
+            <Link to="/edit:id" className="border-2 bg-green-700">Edit</Link>
+            <button onClick={() => handleDelete(adverts.id)} className="border-2 bg-red-700">Delete</button>
           </div>
         </>
       )}
+    </div>
     </div>
   );
 };
