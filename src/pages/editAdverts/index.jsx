@@ -43,7 +43,7 @@ const EditAdverts = () => {
                             </div>
                             <div className="flex flex-col pb-5">
                                 <label htmlFor="">Category</label>
-                                <input name="" id="" 
+                                <select name="" id="" 
                                      className="border-2 p-1 rounded-lg">
                                     <option value="">Electronics</option>
                                     <option value="">Clothing</option>
@@ -54,7 +54,7 @@ const EditAdverts = () => {
                                     <option value="">Art</option>
                                     <option value="">Food</option>
                                     <option value="">Construction</option>
-                                </input>
+                                </select>
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="">Pricing</label>
@@ -63,9 +63,9 @@ const EditAdverts = () => {
                             </div>
                         </div>
                     </form>
-                    <div>
-                        <button className="border-2 p-1 px-3 mt-5 ml-96 bg-green-600 text-white rounded-lg" type="submit">Edit</button>
-                        <button className='border-2 p-1 px-3 mt-5 ml-96 bg-red-500 text-white rounded-lg'>Delete</button>
+                    <div className='flex'>
+                        <button className="border-2 p-1 px-3 mt-5 bg-green-600 text-white rounded-lg" type="submit">Edit</button>
+                        <button className='border-2 p-1 px-3 mt-5  bg-red-500 text-white rounded-lg'>Delete</button>
 
                     </div>
                 </div>
