@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
-import { apiGetSingleAd } from "../../services/advert";
+import { apiDeleteAdverts, apiGetSingleAd } from "../../services/advert";
 
 const Products = () => {
   const [ad, setAd] = useState(null);
@@ -27,7 +26,7 @@ const Products = () => {
 
 const handleDelete = async (id) => {
   try {
-    const res = await axios.delete(`${VITE_BASE_URL}/adverts/${id}`)
+    const res = await apiDeleteAdverts(`adverts/${id}`)
   } catch (error) {
     console.log("Error deleting advert", error)
   }
@@ -44,8 +43,8 @@ const handleDelete = async (id) => {
           <p className="pb-3">{ad.price}</p>
           <p className="pb-3">{ad.category}</p>
           <div>
-            <Link to="/edit:id" className="border-2 bg-green-700">Edit</Link>
-            <button onClick={() => handleDelete(adverts.id)} className="border-2 bg-red-700">Delete</button>
+            <Link to="/edit:id" className="border-2 bg-green-700  p-2 px-3 rounded-lg">Edit</Link>
+            <button onClick={() => handleDelete(ad.id)} className="border-2 p-2 px-3 rounded-lg ml-10 bg-red-700">Delete</button>
           </div>
         </>
       )}

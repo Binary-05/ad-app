@@ -12,4 +12,6 @@ export const apiSearch =async (filter)=> await apiClient.get(`/adverts?filter=${
 export const apiAddAdverts = async (payload) => apiClient.post("/adverts", payload);
 
 
-export const apiUpdateAdverts = async (payload) => apiClient.post("/adverts/id")
+export const apiUpdateAdverts = async (payload) => apiClient.post("/adverts/id");
+
+export const apiDeleteAdverts = async (id) => apiClient.delete("adverts/id");
