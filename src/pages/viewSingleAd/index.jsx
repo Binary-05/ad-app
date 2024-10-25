@@ -31,13 +31,13 @@ const ViewSingleAd = () => {
     }, [adId]);
 
     return (
-        <div>
+        <div className="bg-slate-100">
             <Navbar />
             <div className="p-40">
 
-                <div className=" p-10 border shadow-lg h-5/6 w-10/12 rounded-sm place-self-center">
+                <div className=" p-10 border shadow-lg h-5/6 w-10/12 rounded-sm place-self-center bg-white ">
 
-                    <div className="flex gap-10 border">
+                    <div className="flex gap-10 border bg-white">
                         <div className="h-48 w-4/5 pt-2 ">
                             <img src={`https://savefiles.org/${ad?.media}?shareable_link=436`} alt="" />
                         </div>

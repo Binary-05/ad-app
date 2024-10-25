@@ -21,12 +21,12 @@ const UserPage = () => {
 
 
   return (
-    <div>
-      <Navbar />
+    <div className="bg-slate-100">
+      <Navbar setAds={setAds} />
       <div>
         <div className="pt-28 ">
           <p className="text-4xl py-3 text-center">ADVERTISMENTS</p>
-          <div className=" grid grid-cols-3 gap-2 p-10 border shadow-md h-fit rounded-sm mx-10">
+          <div className=" grid grid-cols-3 gap-2 p-10 border shadow-md h-fit rounded-sm mx-10 bg-white">
             {
               ads.map((ad, index) => {
                 console.log(`${index}: ${ad.media}`);

@@ -3,25 +3,31 @@ import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import { apiSearch } from "../services/advert";
 
 
 
-const Navbar = () => {
+const Navbar = ({ setAds }) => {
 
-const [filteredAds, setFilteredAds] = useState([]);
-const [searchQuery, setSearchQuery] = useState("");
-const handleSearch = (e) =>{
-  const query = e.target.value.toLowerCase();
-  setSearchQuery(query);
-};
+  const [filteredAds, setFilteredAds] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearch = async (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+    const filter = JSON.stringify({
+      title: { "$regex": query, "$options": "i" }
+    });
+    const response = await apiSearch(filter);
+    setAds(response.data);
+  };
 
 
 
   return (
     <div className="flex justify-evenly h-16 bg-black place-items-center fixed left-0 right-0">
       <h1 className="text-3xl text-white">B-ADs</h1>
-      <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearch} name="search" id="" className="h-12 w-6/12 rounded-md border border-black" />
-      <button type="submit" className="border border-white text-white py-3 px-9 rounded-lg">Search</button>
+      <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearch} name="search" id="" className="h-12 w-6/12 rounded-md border border-black p-2" />
+      <button type="submit" className="border border-white text-white py-3 px-9 rounded-lg hover:bg-slate-500">Search</button>
 
 
       <div className="dropdown">
@@ -35,9 +41,9 @@ const handleSearch = (e) =>{
           <Link to="/"> Log Out</Link>
         </div>
       </div>
-      
 
-      
+
+
 
 
       <div className="drpdwn text-center justify-center">
@@ -45,7 +51,7 @@ const handleSearch = (e) =>{
         <div className="drpdwn-content">
           <form>
             <p>Title</p>
-            <input type="text" name="title"  className="rounded" />
+            <input type="text" name="title" className="rounded" />
 
             <p>Category</p>
             <input type="text" className="rounded" />
