@@ -3,6 +3,8 @@ import { IoHome } from "react-icons/io5";
 import { IoPricetags } from "react-icons/io5";
 import { BsFillBagHeartFill } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import { IoSettingsSharp } from "react-icons/io5";
 
 const Sidebar = () => {
   const [clicked, setClicked] = useState(false);
@@ -24,9 +26,9 @@ const Sidebar = () => {
           <span>Products</span>
           <button onClick={() => setClicked(!clicked)}><BsChevronDown /></button>
           {clicked && <div className='border-2 absolute right-[5px] -bottom-[20px] px-[10px] mr-16 rounded-[10px]'>
-            <p>
+            <Link to="/viewproducts">
               View
-            </p>
+            </Link>
           </div>}
         </div>
         <div className='flex gap-2 pb-2'>
@@ -46,22 +48,22 @@ const Sidebar = () => {
           <span>Marketing</span>
         </div>
 
-        <p className='flex mt-4 text-[13px] font-semibold '>Sales channels</p>
-        <div className='flex gap-2'>
-          <span><BsFillBagHeartFill /></span>
+        <p className='flex mt-4 text-[13px] font-semibold pb-2'>Sales channels</p>
+        <div className='flex gap-2 pb-2'>
+          <span className='pt-1'><BsFillBagHeartFill /></span>
           <span>Online Store</span>
         </div>
         <div className='flex gap-2'>
-          <span><BsFillBagHeartFill /></span>
+          <span className='pt-1'><BsFillBagHeartFill /></span>
           <span>Point of Sale</span>
         </div>
-        <p>Apps</p>
+        <p className='pt-7 text-[13px] pb-2'>Apps</p>
         <div className='flex gap-2'>
-          <span><BsFillBagHeartFill /></span>
+          <span className='pt-1'><BsFillBagHeartFill /></span>
           <span>Add apps</span>
         </div>
-        <div className='flex gap-2'>
-          <span><BsFillBagHeartFill /></span>
+        <div className='flex gap-2 pt-20'>
+          <span className='pt-1'><IoSettingsSharp /></span>
           <span>Settings</span>
         </div>
 

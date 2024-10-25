@@ -15,7 +15,7 @@ const UserLoginForms = () => {
     const response = await apiSignin({ email, password });
     // console.log(response.data)
     if (response.status === 200) {
-      localStorage.setItem("token",response.data.accessToken)
+      localStorage.setItem("token", response.data.accessToken)
     }
   };
 
@@ -41,7 +41,8 @@ const UserLoginForms = () => {
               </div>
               <p className="pl-24 text-blue-700">Forgot Password?</p>
             </div>
-            <button type="submit" className="boredr-2 bg-blue-700 text-white p-2 w-[25vw] rounded-lg mb-2">LOGIN</button>
+            <Link>
+              <button type="submit" className="boredr-2 bg-blue-700 text-white p-2 w-[25vw] rounded-lg mb-2">LOGIN</button></Link>
           </div>
           <div className="flex justify-center">
             <p>Don't have an account?</p>

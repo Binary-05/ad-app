@@ -47,7 +47,7 @@ const AddAdverts = () => {
                 <Sidebar />
                 <div className="pl-52 pt-16 bg-[#F1F1F1] w-full">
                     <div className="flex mt-9 ml-9">
-                        <span className="pt-3"><BsArrowLeft /></span>
+                        <Link to={"/dashboard"} className="pt-3"><BsArrowLeft /></Link>
                         <span className="text-[25px] font-bold">Add Advert</span>
                     </div>
                     <form onSubmit={handleSubmit} className="border-2 mt-5 ml-9 w-[50vw] rounded-lg bg-[#FFFFFF]">
